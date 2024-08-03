@@ -1,0 +1,51 @@
+@mixin main($main1,$main2){
+    #{$main1}:$main2;
+}
+%button{
+    @include main(background-color, white);
+    @include main(color, gold);
+    @include main(border, 2px solid black);
+}
+.header{
+    &-container{
+        @include main(padding, 0px 10px);
+        @include main(text-align, center);
+        @include main(display, flex);
+        @include main(flex-direction, column);
+        @include main(max-width, 250px);
+        @include main(margin, 0px auto);
+        @include main(align-content, center);
+        @include main(gap, 2px);
+    }
+}
+#multiplyButton{
+    @include main(max-width, 150px);
+    @include main(transition, all .3s ease-in);
+    @include main(margin, 0px auto);
+    @include main(padding, 7px 30px);
+    @include main(border,2px solid transparent );
+    @include main(background-color, gold);
+    @include main(font-size, 16px);
+    @include main(font-weight, 600);
+    @include main(border-radius, 5px);
+}
+#multiplyButton:active{
+    @extend %button;
+}
+#multiplyButton:hover{
+    @extend %button;
+}
+input{
+    @include main(height, 30px);
+    @include main(border, 2px solid rgb(61, 61, 136));
+    @include main(color, rgb(81, 77, 77));
+    @include main(font-size, 15px);
+    @include main(font-weight, 700);
+    @include main(font-family, 'Segoe UI');
+    @include main(outline, none);
+    @include main(border-radius, 10px);
+    @include main(padding,00px 10px );
+}
+input::placeholder{
+    @include main(color, grey);
+}
