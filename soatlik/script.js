@@ -15,7 +15,7 @@ document.getElementById('multiplyButton').addEventListener('click', function() {
     else if(kunNumber<0){
         document.getElementById('result').innerHTML="Siz manfiy son kiritdingiz !";
     }
-    else if(soatNumber<0 || kunNumber>0){
+    else if(soatNumber<0){
         document.getElementById('result').innerHTML="Siz manfiy son yozdingiz !<br>Eslatma soatlarda manfiy son bo'lmaydi !";
     }
     else if(soatNumber<9 & soatNumber>0){
@@ -28,8 +28,4 @@ document.getElementById('multiplyButton').addEventListener('click', function() {
         let finalResult = intermediateResult * kunNumber;
         document.getElementById('result').innerText = "Natija: " + finalResult;
     }
-    // Olingan natijani kun qiymatiga ko'paytirish
-    // let finalResult = intermediateResult * kunNumber;
-
-    // Natijani qizil rangda ko'rsatish
 });

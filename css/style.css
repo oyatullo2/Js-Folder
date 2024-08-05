@@ -1,6 +1,84 @@
-h1 {
-  color: red;
-  font-size: 25px;
+body {
+  background-color: whitesmoke;
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+#multiplyButton:hover, #multiplyButton:active {
+  background-color: white;
+  color: gold;
+  border: 2px solid black;
+}
+
+.header-container {
+  padding: 0px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  margin: 0px auto;
+  align-content: center;
+  gap: 2px;
+}
+
+#multiplyButton {
+  max-width: 150px;
+  transition: all 0.3s ease-in;
+  margin: 0px auto;
+  padding: 7px 30px;
+  border: 2px solid transparent;
+  background-color: gold;
+  font-size: 16px;
   font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+
+#multiplyButton:hover {
+  border: 2px solid gold;
+}
+
+input {
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  color: green;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 0px;
+  outline: none;
+}
+
+input::-moz-placeholder {
+  color: grey;
+}
+
+input::placeholder {
+  color: grey;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-size: 15px;
+  padding: 0px 20px;
+  font-weight: 600;
+  font-family: arial;
+}
+.nav-container a {
+  color: black;
+  border-bottom: 2px solid black;
+}
+.nav-container a:hover {
+  border-bottom: 2px solid green;
+}
+
+#result {
+  color: green;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: arial;
 }/*# sourceMappingURL=style.css.map */

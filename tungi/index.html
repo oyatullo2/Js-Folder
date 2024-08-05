@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tungi ishchilar</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <label for="tun">Kechgi ish kunlari soni: </label>
-    <input value="0" type="number" id="tun"><br>
-    <button id="button1">Natija</button>
-    <p id="text"></p>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../soatlik/index.html">Soatlik</a>
+            <a href="../kunlik/index.html">Kunlik</a>
+            <a href="../oylik/index.html">Oylik</a>
+        </div>
+    </nav>
+   <header class="header">
+    <div class="header-container">
+        <input max="10" type="number" id="tun" placeholder="Kunni kiriting"><br>
+        <button id="multiplyButton">Natija</button>
+        <p id="result"></p>
+    </div>
+   </header>
 
     <script src="script.js"></script>
 </body>

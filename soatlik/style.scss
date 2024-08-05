@@ -1,6 +1,10 @@
 @mixin main($main1,$main2){
     #{$main1}:$main2;
 }
+*{
+    @include main(text-decoration, none);
+    @include main(list-style, none);
+}
 %button{
     @include main(background-color, white);
     @include main(color, gold);
@@ -34,18 +38,42 @@
 }
 #multiplyButton:hover{
     @extend %button;
+    @include main(border, 2px solid gold);
 }
 input{
-    @include main(height, 30px);
-    @include main(border, 2px solid rgb(61, 61, 136));
-    @include main(color, rgb(81, 77, 77));
-    @include main(font-size, 15px);
-    @include main(font-weight, 700);
-    @include main(font-family, 'Segoe UI');
-    @include main(outline, none);
-    @include main(border-radius, 10px);
-    @include main(padding,00px 10px );
+   @include main(padding,10px 10px);
+   @include main(border-radius, 5px);
+   @include main(border,2px solid grey );
+   @include main(color, green);
+   @include main(font-weight, 600);
+   @include main(font-size, 15px);
+   @include main(margin-bottom, 0px);
+   @include main(outline, none);
 }
 input::placeholder{
     @include main(color, grey);
+}
+.nav{
+    &-container{
+        @include main(display, flex);
+        @include main(justify-content, space-around);
+        @include main(margin-bottom, 20px);
+        @include main(font-size, 15px);
+        @include main(padding, 0px 20px);
+        @include main(font-weight, 600);
+        @include main(font-family, arial);
+        a{
+            @include main(color, black);
+            @include main(border-bottom, 2px solid black);
+        }
+        a:hover{
+            @include main(border-bottom, 2px solid green);
+        }
+    }
+}
+#result{
+    @include main(color, green);
+    @include main(font-size, 15px);
+    @include main(font-weight, 600);
+    @include main(font-family, arial);
 }

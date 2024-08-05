@@ -48,7 +48,7 @@ console.log(a);
 // console.log(a);
 
 
-// math pow kutubhonasi bu kutobhonaga don yoziladi va u sonlarning darajaga kotarib beradi maslan bu yerda 2 va 6 soni bor bu 2 ning 6 darajasini korsatadi yani 64ni!
+// math pow kutubhonasi bu kutobhonaga son yoziladi va u sonlarning darajaga kotarib beradi maslan bu yerda 2 va 6 soni bor bu 2 ning 6 darajasini korsatadi yani 64ni!
 // let a=Math.pow(2 ,6);
 // console.log(a);
 
