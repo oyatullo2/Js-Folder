@@ -1,84 +1,150 @@
 body {
-  background-color: whitesmoke;
-}
-
-* {
-  text-decoration: none;
-  list-style: none;
-}
-
-#multiplyButton:hover, #multiplyButton:active {
-  background-color: white;
-  color: gold;
-  border: 2px solid black;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  color: black;
+  font-family: arial;
+  font-weight: 600;
+  font-size: 15px;
 }
 
 .header-container {
-  padding: 0px 10px;
-  text-align: center;
   display: flex;
-  flex-direction: column;
-  max-width: 250px;
   margin: 0px auto;
-  align-content: center;
-  gap: 2px;
+  gap: 10px;
+  margin-top: 150px;
+  justify-content: center;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  height: 250px;
+  padding: 20px;
+  max-width: 290px;
+  align-items: flex-start;
+  border-radius: 10px;
 }
-
-#multiplyButton {
-  max-width: 150px;
-  transition: all 0.3s ease-in;
-  margin: 0px auto;
-  padding: 7px 30px;
+.header p {
+  color: green;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: "Segoe UI";
+}
+.header-text {
+  position: absolute;
+  top: 230px;
+  left: 620px;
+}
+.header #kun {
+  margin-top: -15px;
+}
+.header #soat {
+  margin-top: -15px;
+}
+.header input {
+  padding-left: 10px;
+  margin-left: 10px;
+  border: 2px solid green;
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  color: green;
+  outline: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+.header input:hover {
+  border: 2px solid rgb(111, 255, 111);
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: green;
+}
+.header input::-moz-placeholder {
+  color: green;
+}
+.header input::placeholder {
+  color: green;
+}
+.header button {
   border: 2px solid transparent;
-  background-color: gold;
+  text-align: center;
+  color: white;
+  background-color: green;
   font-size: 16px;
   font-weight: 600;
-  border-radius: 5px;
-}
-
-#multiplyButton:hover {
-  border: 2px solid gold;
-}
-
-input {
-  padding: 10px 10px;
-  border-radius: 5px;
-  border: 2px solid grey;
-  color: green;
-  font-weight: 600;
-  font-size: 15px;
-  margin-bottom: 0px;
-  outline: none;
-}
-
-input::-moz-placeholder {
-  color: grey;
-}
-
-input::placeholder {
-  color: grey;
-}
-
-.nav-container {
+  height: 36px;
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-  font-size: 15px;
-  padding: 0px 20px;
-  font-weight: 600;
-  font-family: arial;
+  align-items: center;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
-.nav-container a {
+.header button:hover {
+  background-color: white;
   color: black;
-  border-bottom: 2px solid black;
+  border: 2px solid rgb(0, 255, 0);
 }
-.nav-container a:hover {
-  border-bottom: 2px solid green;
+.header label {
+  display: none;
 }
-
-#result {
-  color: green;
-  font-size: 15px;
-  font-weight: 600;
-  font-family: arial;
+@media (max-width: 500px) {
+  .header-text {
+    position: absolute;
+    top: 250px;
+    left: 40px;
+  }
+  .header-container {
+    display: flex;
+    max-width: 240px;
+    margin: 0px auto;
+    gap: 5px;
+    margin-top: 150px;
+    justify-content: center;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    height: 250px;
+    padding: 20px;
+    max-width: 280px;
+    align-items: flex-start;
+    border-radius: 10px;
+  }
+  .header input {
+    padding-left: 10px;
+    border: 2px solid green;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    color: green;
+    outline: none;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .header input:hover {
+    border: 2px solid rgb(111, 255, 111);
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: green;
+  }
+  .header input::-moz-placeholder {
+    color: green;
+  }
+  .header input::placeholder {
+    color: green;
+  }
+  .header button {
+    border: 2px solid transparent;
+    text-align: center;
+    color: white;
+    background-color: green;
+    font-size: 16px;
+    font-weight: 600;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .header button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(0, 255, 0);
+  }
+  .header label {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,148 @@
+@mixin main($main1,$main2){
+    #{$main1}:$main2;
+}
+body{
+    @include main(padding, 0px);
+    @include main(margin, 0px);
+    @include main(box-sizing, border-box);
+    @include main(color, black);
+    @include main(font-family, arial);
+    @include main(font-weight, 600);
+    @include main(font-size, 15px);
+}
+.header{
+    &-container{
+        @include main(display, flex);
+        @include main(margin, 0px auto);
+        @include main(gap, 10px);
+        @include main(margin-top, 150px);
+        @include main(justify-content, center);
+        @include main(box-shadow, 0px 0px 10px 5px rgba(0,0,0,0.2));
+        @include main(height, 250px);
+        @include main(padding, 20px );
+        @include main(max-width, 290px);
+        @include main(align-items, flex-start);
+        @include main(border-radius, 10px);
+    }
+    p{
+        @include main(color, green);
+        @include main(font-weight, 600);
+        @include main(font-size, 16px);
+        @include main(font-family, 'Segoe UI');
+    }
+    &-text{
+        @include main(position, absolute);
+        @include main(top, 230px);
+        @include main(left, 620px);
+    }
+    #kun{
+        margin-top: -15px;
+    }
+    #soat{
+        margin-top: -15px;  
+    }
+    input{
+        @include main(padding-left, 10px);
+        @include main(margin-left, 10px);
+        @include main(border,2px solid green );
+        @include main(width, 250px);
+        @include main(height, 30px);
+        @include main(border-radius, 5px);
+        @include main(color, green);
+        @include main(outline, none);
+        @include main(font-weight, 600);
+        @include main(font-size, 16px);
+    }
+    input:hover{
+        @include main(border, 2px solid rgb(111, 255, 111));
+        @include main(color, black);
+        @include main(text-decoration, underline);
+        @include main(text-decoration-color, green);
+    }
+    input::placeholder{
+        @include main(color, green);
+    }
+    button{
+        @include main(border, 2px solid transparent);
+        @include main(text-align, center);
+        @include main(color, white);
+        @include main(background-color, green);
+        @include main(font-size, 16px);
+        @include main(font-weight, 600);
+        @include main(height, 36px);
+        @include main(display, flex);
+        @include main(align-items,center );
+        @include main(border-radius, 5px);
+        @include main(transition, all .3s ease);
+    }
+    button:hover{
+        @include main(background-color, white);
+        @include main(color,black);
+        @include main(border, 2px solid rgb(0, 255, 0));
+    }
+    label{
+        @include main(display, none);
+    }
+    @media (max-width:500px) {
+        &-text{
+            @include main(position, absolute);
+            @include main(top, 250px);
+            @include main(left, 40px);
+        }
+        &-container{
+            @include main(display, flex);
+            @include main(max-width, 240px);
+            @include main(margin, 0px auto);
+            @include main(gap, 5px);
+            @include main(margin-top, 150px);
+            @include main(justify-content, center);
+            @include main(box-shadow, 0px 0px 10px 5px rgba(0,0,0,0.2));
+            @include main(height, 250px);
+            @include main(padding, 20px );
+            @include main(max-width, 280px);
+            @include main(align-items, flex-start);
+            @include main(border-radius, 10px);
+        }
+        input{
+            @include main(padding-left, 10px);
+            @include main(border,2px solid green );
+            @include main(width, 250px);
+            @include main(height, 30px);
+            @include main(border-radius, 5px);
+            @include main(color, green);
+            @include main(outline, none);
+            @include main(font-weight, 600);
+            @include main(font-size, 16px);
+        }
+        input:hover{
+            @include main(border, 2px solid rgb(111, 255, 111));
+            @include main(color, black);
+            @include main(text-decoration, underline);
+            @include main(text-decoration-color, green);
+        }
+        input::placeholder{
+            @include main(color, green);
+        }
+        button{
+            @include main(border, 2px solid transparent);
+            @include main(text-align, center);
+            @include main(color, white);
+            @include main(background-color, green);
+            @include main(font-size, 16px);
+            @include main(font-weight, 600);
+            @include main(height, 36px);
+            @include main(display, flex);
+            @include main(align-items,center );
+            @include main(border-radius, 5px);
+            @include main(transition, all .3s ease);
+        }
+        button:hover{
+            @include main(background-color, white);
+            @include main(color, black);
+            @include main(border, 2px solid rgb(0, 255, 0));
+        }
+        label{
+            @include main(display, none);
+        }
+    }
+}
