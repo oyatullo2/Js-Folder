@@ -1,0 +1,60 @@
+body{
+    perspective: 500px;
+}
+div{
+    background-color: red;
+    width: 200px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all .7s ease;
+    height: 200px;
+    margin: 200px auto;
+    text-shadow: 0px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    /* transform: rotateX(45deg); */
+    /* transform: rotateZ(20deg); */
+    /* transform:rotateY(40deg); */
+    /* transform: translateX(30deg); */
+    animation: box 5s infinite;
+}
+@keyframes box {
+    0%{
+        transform: rotate(-40deg);
+        color: white;
+    }
+    17%{
+        color: yellow;
+        transform: rotateX(40deg);
+    }
+    34%{
+        transform: rotateY(40deg);
+        color: blue;
+    }
+    51%{
+        color: yellowgreen;
+        transform: rotateZ(40deg);
+    }
+    68%{
+        color: aqua;
+        transform: rotateX(-40deg);
+    }
+    85%{
+        color: green;
+        transform: rotateY(-40deg);
+    }
+    100%{
+        color: blueviolet;
+        transform: rotateZ(-40deg);
+    }
+}
+/* div:hover{
+    transform: translateY(20px);
+} */
+div:hover{
+    transform: rotateY(32deg);
+}
