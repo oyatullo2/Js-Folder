@@ -14,5 +14,4 @@ let cars=["Men ","Yana men","yana bir bor men","Men yana"];
 
 // console.log(cars.join("<br>"))   =>kiritilgan narsani qoshib beradi
 // console.log(cars.reverse())   =>Teskari yozadi
-
 console.log(cars);

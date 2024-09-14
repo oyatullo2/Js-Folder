@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift yoki CapsLock bosilganda input faollashadi</title>
+</head>
+<body>
+
+    <input type="text" id="myInput" placeholder="Shift yoki CapsLock bosilganda yozishingiz mumkin" disabled>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            let input = document.getElementById('myInput');
+            
+            // Shift yoki CapsLock bosilganida inputni faollashtirish
+            if (event.key === 'Enter' || event.getModifierState('5')) {
+                input.disabled = false; // Input maydonini faollashtirish
+                input.placeholder = "Endi yozishingiz mumkin";
+                input.focus(); // Foydalanuvchi yozishni boshlashi uchun inputga fokus berish
+            }
+        });
+
+        // Shift yoki CapsLockdan tashqari boshqa tugma bosilsa inputni bloklash
+        document.addEventListener('keyup', function(event) {
+            let input = document.getElementById('myInput');
+            
+            // Shift yoki CapsLock tugmalari qo'yib yuborilsa, inputni bloklash
+            if (event.key === 'Enter' || !event.getModifierState('5')) {
+                input.disabled = true; // Inputni bloklash
+                input.placeholder = "Enter yoki 5 bosilganda yozishingiz mumkin";
+            }
+        });
+    </script>
+
+</body>
+</html>
