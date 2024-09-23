@@ -1,19 +1,17 @@
-// let count = 1; 
+let count = 1; 
 
-// document.querySelector("#add").addEventListener('click', function() {
-//     let a = document.querySelector("#text");
-//     a.innerHTML += `Item ${count}<br>`; 
-//     count++; 
-// });
+document.querySelector("#add").addEventListener('click', function() {
+    let a = document.querySelector("#text");
+    a.innerHTML += `Item ${count}<br>`; 
+    count++; 
+});
 
-
-
-// document.querySelector("#yes").addEventListener('click',function(){
-//     let a=document.querySelector("#name");
-//     let b=document.querySelector("#age");
-//     let d=document.querySelector("#married");
-
-//     console.log("Name")
-// })
-
-
+document.querySelector("#delete").addEventListener('click', function() {
+    let b = document.querySelector("#text");
+    let items = b.innerHTML.trim().split('<br>').filter(item => item !== "");
+    if (items.length > 0) { 
+        items.pop();
+        b.innerHTML = items.join('<br>') + (items.length > 0 ? '<br>' : '');
+        count--; 
+    }
+});

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    background-color: aqua;
+    }
+    .main-div{
+        background-color: white;
+        width: 530px ;
+        border-radius: 20px;
+        height: 350px;
+        margin: 0px auto;
+        margin-top: 150px;
+        box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.2);
+    }
+    .div{
+        border: 3px solid black;
+        border-radius: 10px;
+        position: relative;
+        top: 35px;
+        width: 522px;
+        outline: none;
+        height: 280px;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+    }
+    p{
+        z-index: 10;
+        color: rgb(62, 231, 62);
+        font-weight: 700;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: -0px;
+        position: absolute;
+        left: 20px;
+    }
+</style>
+<body>
+    <textarea id="textArea" class="div" rows="4" cols="50"></textarea>
+    <p>Harflar soni: <span id="charCount">0</span></p>    
+    <p id="error"></p>
+</body>
+<script src="script4.js"></script>
+</html>
